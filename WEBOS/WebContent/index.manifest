@@ -1,0 +1,31 @@
+CACHE MANIFEST
+#version 1.10
+CACHE:
+index.html
+js/app.js
+js/clock.js
+js/data.js
+js/database.js
+js/desktop.js
+js/history.js
+js/taskbar.js
+js/timer.js
+js/file.js
+js/utils.js
+css/index.css
+images/appHolder1.png
+images/background.jpg
+images/clock.png
+images/close.gif
+images/computer.gif
+images/history.png
+images/network.gif
+images/recycleBin.gif
+images/startIcon.png
+images/taskBar.png
+images/vidioplayer.gif
+images/notebook.gif
+images/text.gif
+images/save.gif
+movs/movie.ogg
+sounds/WindowsLogonSound.wav

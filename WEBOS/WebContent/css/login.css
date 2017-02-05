@@ -1,0 +1,31 @@
+body {
+	text-align: center;
+}
+
+.layout{
+	margin:0 auto;
+	width: 832px;
+	height: 501px;
+}
+
+.wrap { 
+	text-align:center;
+	background-color: #E2E9EF;
+	background-image: url(../images/swoosh.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 832px;
+	height: 501px;
+	border: 0px solid gray;
+	margin-top: 50px;
+	padding-top: 100px;
+}
+
+.loginForm{
+	background-color: #E2E9EF;
+	width: 280px;
+	margin-left: 276px;
+	padding-bottom: 7px;
+}
+
+

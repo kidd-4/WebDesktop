@@ -1,0 +1,197 @@
+body {	
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #0000FF;
+}
+
+a img {
+	border: none;
+}
+
+.clockHolder{
+	width: 128px;
+	height: 128px;
+	position:absolute;
+	left: 900px;
+	top: 50px;
+	background-image: url(../images/clock.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: 0px solid gray;	
+}
+
+.canvas{
+	border: 0px solid gray;	
+	position:absolute;
+	left: 900px;
+	top: 50px;
+}
+
+.layout{
+	margin:0 auto;
+	width: 832px;
+	height: 501px;
+}
+
+.wrap { 
+	text-align:left;
+	background-color: #E2E9EF;
+	background-image: url(../images/background.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 832px;
+	height: 501px;
+	border: 0px solid gray;
+	margin-top: 10px;
+}
+
+.taskBar{
+	border: 0px solid gray;
+	background-image: url(../images/taskBar.png);
+	background-repeat: repeat;
+	background-position: center center;
+	width: 832px;
+	height: 40px;
+	
+}
+
+.iconHolder{
+	border: none;
+	width: 48px;
+	height: 48px;
+	border: 0px solid gray;
+	float: left;
+	margin: 3px;
+	text-align: center;
+}
+
+.startIconHolder{
+	background-image: url(../images/startIcon.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 58px;
+	height: 40px;
+}
+
+.appContextMenu{
+	filter: alpha(opacity=50); 
+	position:absolute;
+	display:none;
+	cursor:default;
+}
+
+.appContextMenuItem{
+	text-align: center;
+	font-size: 18px;
+	height: 25px;
+}
+
+.notebookHolder{
+	position:absolute;
+	width: 600px;
+	height: 300px;
+	
+	background-color: #FFFFFF;
+		
+	left: 300px;		
+	top: 50px;
+	border: 2px solid gray;
+	
+	padding: 30px;
+	
+}
+
+.videoPlayerHolder{
+	position:absolute;
+	width: 670px;
+	height: 461px;
+	
+    background-image: url(../images/appHolder1.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	left: 300px;		
+	top: 10px;
+	border: 0px solid gray;
+	
+}
+
+.spliceHolder{
+	position:absolute;
+	width: 500px;
+	height: 436px;
+	
+    
+	
+	left: 370px;		
+	top: 20px;
+	border: 3px dashed blue;
+}
+	
+.video{
+	position:absolute;
+	left: 133px;		
+	top: 110px;
+}	
+	
+	
+.closeHolder{
+	display:none;
+	float:right;
+}
+
+.saveHolder{
+	display:none;
+	float:left;
+}
+
+.hiddenHolder{
+	display:none;
+}
+
+.mask{
+	background-color: #E2E9EF;
+	position:absolute;
+	display:none;
+	width:832px;
+	height:501px;
+}
+
+.emptyAppHolder{
+	position: absolute;
+	display: none;
+	cursor: default;
+}
+
+.historyHolder{
+	position:absolute;
+	width: 537px;
+	height: 389px;
+	
+	display:none;
+	cursor:default;
+	
+    background-image: url(../images/history.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	left: 360px;		
+	top: 60px;
+	border: 0px solid gray;	
+}
+
+.historyTableHolder{
+	padding: 5px 60px 60px 60px;
+	float:left;
+}
+
+.closeHolderForHistory{
+	float:right;
+}
+	
+
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+
+<html manifest="index.manifest">
+
+<head>
+<meta charset="UTF-8">
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+<title>WEB OS</title>
+
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/database.js"></script>
+<script type="text/javascript" src="js/clock.js"></script>
+<script type="text/javascript" src="js/desktop.js"></script>
+<script type="text/javascript" src="js/taskbar.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/history.js"></script>
+<script type="text/javascript" src="js/file.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+
+
+<script type="text/javascript">
+
+
+//offline app support
+setInterval(function() {
+   applicationCache.update();
+}, 5000);
+applicationCache.addEventListener("updateready", function() {
+   if (confirm("Local cache has been updated, need to refresh to obtain the newest version, do you want to refresh?")){ 	   
+       applicationCache.swapCache();
+       location.reload();
+   }
+}, true);
+
+
+//init body
+function init() {
+	initDataBase();
+	initClock();
+	addLoginHistory();
+	initDesktop();	
+	initTaskbar();
+	initApps();
+	initFiles();
+}
+</script>
+
+</head>
+
+
+
+<body onload="init()">
+
+	<audio src="sounds/WindowsLogonSound.wav" autoplay>
+	</audio>
+
+	<div id="layout" class="layout">
+		<div id="mainDiv" class="wrap"> 
+			<div id="clockHolder" class="clockHolder"></div>
+			<canvas id="canvas" width="128px" height="128px" class="canvas"></canvas>
+			<div id="mask" class="mask"></div>
+			<div id="appHolder" class="emptyAppHolder" onClick="return false;"></div>
+			<div id="hiddenHolder" class="hiddenHolder">
+				<div id="closeHolder" class="closeHolder"><img src="images/close.gif" /></div>
+				<div id="saveHolder" class="saveHolder"><img src="images/save.gif" /></div>
+			</div>
+			<div id="historyHolder" class="historyHolder" onClick="return false;">
+				<div id="closeHolderForHistory" class="closeHolderForHistory"></div>
+					<div id="historyTableHolder" class="historyTableHolder">
+						<table id="historyTable" width=100% border=1></table>
+					</div>	
+			</div>
+		</div>
+		<div id="taskBar" class="taskBar">
+			<div id="startIconHolder" class="startIconHolder"></div>
+		</div>
+		<div id="appContextMenu" class="appContextMenu" onClick="return false;"> </div>
+	</div>
+
+</body>
+
+</html>

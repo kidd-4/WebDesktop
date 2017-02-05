@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html manifest="login.manifest">
+
+<head>
+<meta charset="UTF-8">
+<link href="css/login.css" rel="stylesheet" type="text/css"/>
+<title>WEB OS</title>
+
+<script type="text/javascript">
+
+function highLight(opacity){
+	var login = document.getElementById("login"); 
+	login.style.display="block";
+	login.style.opacity = opacity;
+}
+
+function init() {	
+	highLight(0.59);
+
+	//offline app support
+    setInterval(function() {
+       applicationCache.update();
+   }, 5000);
+   applicationCache.addEventListener("updateready", function() {
+       if (confirm("Local cache has been updated, need to refresh to obtain the newest version, do you want to refresh?")){ 	   
+           applicationCache.swapCache();
+           location.reload();
+       }
+   }, true);
+}
+
+function saveAccount(){
+    var username = document.getElementById("username");       
+ 
+    //sessionStorage.setItem("username", username.value); 
+    localStorage.setItem("username", username.value); 
+}
+
+</script>
+</head>
+
+<body onload="init()">
+
+	<div id="layout" class="layout">
+		<div id="mainDiv" class="wrap"> 
+			<div id="login" class="loginForm" onmouseover="highLight(1)" onmouseout="highLight(0.59)">
+				<!--  <form name="form" action="index.html" method="post">-->
+				<form>
+					<h1>WEB OS LOGIN</h1>
+					<label for=username width=100>UserName</label>
+					<input name=username id=username type=text required /><br/><br/>
+					<label for=passwd>Password</label>
+					<input name=passwd id=passwd type=password required /><br/><br/>
+					<!--  <input type=submit onClick="saveAccount()"></input> -->
+					<input type=submit  formaction="index.html"  formmethod="post" onClick="saveAccount()" value="Login">
+					<input type=reset value="Reset">
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
+
+

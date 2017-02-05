@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<script type="text/javascript" >
+function saveAccount(){
+    var username = document.getElementById("username");       
+ 
+    //sessionStorage.setItem("username", username.value); 
+    localStorage.setItem("username", username.value); 
+}
+
+</script>
+
+<body>
+<form id="slick-login"  action="WebOS.html"    method="post">
+        <label for="username">username</label><input type="text" id="username" name="username" class="placeholder" placeholder="me@tutsplus.com">
+        <label for="password">password</label><input type="password" id="password" name="password" class="placeholder" placeholder="password">
+        <input type="submit" value="Log In" onclick="saveAccount()">
+</form>
+</body>
+</html>
